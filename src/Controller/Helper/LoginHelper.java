@@ -5,7 +5,7 @@
 package Controller.Helper;
 
 import View.Login;
-import model.Usuario;
+import Model.Usuario;
 
 /**
  *

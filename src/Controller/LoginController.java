@@ -6,7 +6,7 @@ package Controller;
 
 import Controller.Helper.LoginHelper;
 import View.Login;
-import model.Usuario;
+import Model.Usuario;
 
 /**
  *
