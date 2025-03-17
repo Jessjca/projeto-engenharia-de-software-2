@@ -7,7 +7,7 @@ package View;
 
 /**
  *
- * @author tiago
+ * @author Jessica Costa
  */
 public class Agenda extends javax.swing.JFrame {
 

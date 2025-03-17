@@ -7,7 +7,7 @@ package View;
 
 /**
  *
- * @author tiago
+ * @author Jessica Costa
  */
 public class MenuPrincipal extends javax.swing.JFrame {
 

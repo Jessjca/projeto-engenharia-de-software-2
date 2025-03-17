@@ -9,7 +9,7 @@ import model.Usuario;
 
 /**
  *
- * @author Jessica
+ * @author Jessica Costa
  */
 public class Main {
     
