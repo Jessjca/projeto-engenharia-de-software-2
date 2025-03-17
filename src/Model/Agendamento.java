@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Marina Savitzki
+ * @author Jessica Costa
  */
 public class Agendamento {
     

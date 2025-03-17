@@ -22,11 +22,6 @@ public class Main {
         
         Usuario usuario = new Usuario(2, "admin", "123");
         System.out.println(usuario.getNome());
-        
-        
-        
-        
-        
     }
     
     

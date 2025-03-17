@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author Samuel
+ * @author Jessica Costa
  */
 public class Usuario extends Pessoa {
     
