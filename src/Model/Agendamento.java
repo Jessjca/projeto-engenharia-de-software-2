@@ -12,12 +12,14 @@ import java.util.logging.Logger;
  */
 public class Agendamento {
     
+    private int id;
     private String compromisso;
     private Date data;
     private String observacao;
     private Date dataSistema;
 
-    public Agendamento(String compromisso, String data, Date dataSistema) {
+    public Agendamento(int id, String compromisso, String data, Date dataSistema) {
+        this.id = id;
         this.compromisso = compromisso;
         try {
             this.data = new SimpleDateFormat("dd/MM/yyyy HH:mm").parse(data);
@@ -27,9 +29,17 @@ public class Agendamento {
         this.dataSistema = dataSistema;
     }
 
-    public Agendamento(String compromisso, String data, Date dataSistema, String observacao) {
-        this(compromisso, data, dataSistema);
+    public Agendamento(int id, String compromisso, String data, Date dataSistema, String observacao) {
+        this(id, compromisso, data, dataSistema);
         this.observacao = observacao;
+    }
+    
+    public int getId() {
+        return id;
+    }
+    
+    public void setId(int id) {
+        this.id = id;
     }
     
     public String getCompromisso() {
@@ -74,7 +84,4 @@ public class Agendamento {
     public void setObservacao(String observacao) {
         this.observacao = observacao;
     }
-
-    
-    
 }
