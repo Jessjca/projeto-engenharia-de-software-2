@@ -24,8 +24,8 @@ public class Banco {
         
         //criando elementos
         
-        Usuario usuario1 = new Usuario(1, "Jessica Costa", "123");
-        Usuario usuario2 = new Usuario(2, "Mateus Andrade", "321");
+        Usuario usuario1 = new Usuario(1, "Jessica", "123");
+        Usuario usuario2 = new Usuario(2, "Mateus", "321");
         
         Agendamento agendamento1 = new Agendamento(1, "Aniversario de mainha", "14/07/2018 09:30", new Date());
         Agendamento agendamento2 = new Agendamento(1, "Aniversario de painho", "14/07/2018 10:00", new Date());
