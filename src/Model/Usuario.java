@@ -1,31 +1,36 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Model;
 
-import java.util.Date;
-
 /**
- *
  * @author Jessica Costa
  */
-public class Usuario extends Pessoa {
+public class Usuario {
     
-    
-    protected String senha;
-    protected String nivelAcesso;
+    private int id;
+    private String nome;
+    private String senha;
 
+    // Construtor
     public Usuario(int id, String nome, String senha) {
-        super(id, nome);
+        this.id = id;
+        this.nome = nome;
         this.senha = senha;
     }
 
-    public Usuario(String senha, String nivelAcesso, int id, String nome, char sexo, Date dataNascimento, String telefone, String email, String rg) {
-        super(id, nome, sexo, dataNascimento, telefone, email, rg);
-        this.senha = senha;
-        this.nivelAcesso = nivelAcesso;
+    // Métodos Getters e Setters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getSenha() {
@@ -35,16 +40,4 @@ public class Usuario extends Pessoa {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-
-    public String getNivelAcesso() {
-        return nivelAcesso;
-    }
-
-    public void setNivelAcesso(String nivelAcesso) {
-        this.nivelAcesso = nivelAcesso;
-    }
-   
-   
-    
-    
 }

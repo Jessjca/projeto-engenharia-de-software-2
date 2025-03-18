@@ -103,7 +103,7 @@ public class Login extends javax.swing.JFrame {
 
     private void ButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonEntrarActionPerformed
         //Executar quando clicar no botao Entrar
-        controller.fizTarefa();
+        this.controller.entrarNoSistema();
 
         
     }//GEN-LAST:event_ButtonEntrarActionPerformed
@@ -177,7 +177,4 @@ public class Login extends javax.swing.JFrame {
     public void setTextUsuario(JTextField TextUsuario) {
         this.TextUsuario = TextUsuario;
     }
-    
-    
-    
 }

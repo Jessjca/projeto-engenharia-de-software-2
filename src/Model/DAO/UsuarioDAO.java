@@ -62,13 +62,19 @@ public class UsuarioDAO {
      * @param usuario
      * @return Usuario encontrado no banco de dados
      */
-    public Usuario selectPorNomeESenha(Usuario usuario){
+    public Usuario selectPorNomeESenha(Usuario usuario) {
+        if (Banco.usuario == null) { // Inicializa o banco se necessário
+            Banco.inicia();
+        }
+
+        // Procura um usuário que tenha o mesmo nome e senha
         for (Usuario usuarioLista : Banco.usuario) {
-            if(nomeESenhaSaoIguais(usuarioLista,usuario)){
+            if (usuarioLista.getNome().equals(usuario.getNome()) &&
+                usuarioLista.getSenha().equals(usuario.getSenha())) {
                 return usuarioLista;
             }
         }
-        return null;
+        return null; // Retorna null se não encontrar
     }
 
     /**
