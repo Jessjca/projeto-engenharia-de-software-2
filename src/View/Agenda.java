@@ -5,17 +5,24 @@
  */
 package View;
 
+import Controller.AgendaController;
+import javax.swing.JTable;
+
 /**
  *
  * @author Jessica Costa
  */
 public class Agenda extends javax.swing.JFrame {
 
+    private final AgendaController controller;
+
     /**
      * Creates new form Agenda
      */
     public Agenda() {
         initComponents();
+        controller = new AgendaController(this); 
+        iniciarAgenda();
     }
 
     /**
@@ -43,7 +50,7 @@ public class Agenda extends javax.swing.JFrame {
         LabelAgendaPainelFundo = new javax.swing.JLabel();
         LabelAgendaFundo = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         LabelId1.setForeground(new java.awt.Color(255, 255, 255));
@@ -105,10 +112,7 @@ public class Agenda extends javax.swing.JFrame {
 
         TableAgendamentos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Aniversário do Dedeco", "22/04/2018", "08:00", ""},
-                {"", "22/04/2018", "09:00", "Pode se Atrazar um pouco"},
-                {"Reunião técnica", "23/04/2018", "08:00", null},
-                {null, "23/04/2018", "09:00", null}
+
             },
             new String [] {
                 "Compromisso", "Data", "Hora", "Observação"
@@ -116,10 +120,10 @@ public class Agenda extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(TableAgendamentos);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 590, 1120, 330));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 600, 1120, 330));
 
         LabelAgendaPainelFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/Agenda-PainelFundo.png"))); // NOI18N
-        getContentPane().add(LabelAgendaPainelFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 1000));
+        getContentPane().add(LabelAgendaPainelFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, -1, 1000));
 
         LabelAgendaFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/imagens/AgendaFundo.png"))); // NOI18N
         getContentPane().add(LabelAgendaFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 1000));
@@ -191,4 +195,18 @@ public class Agenda extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables
+
+    private void iniciarAgenda() {
+        this.controller.atualizaTabela();
+    }
+
+    public JTable getTableAgendamentos() {
+        return TableAgendamentos;
+    }
+
+    public void setTableAgendamentos(JTable TableAgendamentos) {
+        this.TableAgendamentos = TableAgendamentos;
+    }
+    
+    
 }
